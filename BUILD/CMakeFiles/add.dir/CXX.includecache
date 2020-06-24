@@ -6,11 +6,3 @@
 
 #IncludeRegexTransform: 
 
-../include/add.h
-
-/home/xpy/cmake/test1/src/hello.cpp
-iostream
--
-add.h
-/home/xpy/cmake/test1/src/add.h
-

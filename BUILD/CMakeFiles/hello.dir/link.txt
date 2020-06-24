@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/hello.dir/src/hello.cpp.o  -o hello   -L/home/xpy/cmake/test1/static  -Wl,-rpath,/home/xpy/cmake/test1/static -Wl,-Bstatic -ladd -Wl,-Bdynamic 
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/hello.dir/src/hello.cpp.o  -o hello   -L/home/xpy/cmake/test1/BUILD  -Wl,-rpath,/home/xpy/cmake/test1/BUILD -Wl,-Bstatic -ladd -Wl,-Bdynamic 

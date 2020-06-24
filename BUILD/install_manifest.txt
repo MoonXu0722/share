@@ -1,1 +1,1 @@
-/usr/local/shared/libadd.so
+/usr/local/static/libadd.a

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/add.dir/src/add.cpp.o"
   "CMakeFiles/add.dir/src/hello.cpp.o"
+  "libadd.a"
   "libadd.pdb"
-  "libadd.so"
 )
 
 # Per-language clean rules from dependency scanning.

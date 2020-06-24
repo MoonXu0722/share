@@ -56,52 +56,6 @@ CMAKE_BINARY_DIR = /home/xpy/cmake/test1/BUILD
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -157,44 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named add
+# Target rules for targets named hello
 
 # Build rule for target.
-add: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 add
-.PHONY : add
+hello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hello
+.PHONY : hello
 
 # fast build rule for target.
-add/fast:
-	$(MAKE) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/build
-.PHONY : add/fast
-
-src/add.o: src/add.cpp.o
-
-.PHONY : src/add.o
-
-# target to build an object file
-src/add.cpp.o:
-	$(MAKE) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/src/add.cpp.o
-.PHONY : src/add.cpp.o
-
-src/add.i: src/add.cpp.i
-
-.PHONY : src/add.i
-
-# target to preprocess a source file
-src/add.cpp.i:
-	$(MAKE) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/src/add.cpp.i
-.PHONY : src/add.cpp.i
-
-src/add.s: src/add.cpp.s
-
-.PHONY : src/add.s
-
-# target to generate assembly for a file
-src/add.cpp.s:
-	$(MAKE) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/src/add.cpp.s
-.PHONY : src/add.cpp.s
+hello/fast:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
+.PHONY : hello/fast
 
 src/hello.o: src/hello.cpp.o
 
@@ -202,7 +129,7 @@ src/hello.o: src/hello.cpp.o
 
 # target to build an object file
 src/hello.cpp.o:
-	$(MAKE) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/src/hello.cpp.o
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/hello.cpp.o
 .PHONY : src/hello.cpp.o
 
 src/hello.i: src/hello.cpp.i
@@ -211,7 +138,7 @@ src/hello.i: src/hello.cpp.i
 
 # target to preprocess a source file
 src/hello.cpp.i:
-	$(MAKE) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/src/hello.cpp.i
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/hello.cpp.i
 .PHONY : src/hello.cpp.i
 
 src/hello.s: src/hello.cpp.s
@@ -220,7 +147,7 @@ src/hello.s: src/hello.cpp.s
 
 # target to generate assembly for a file
 src/hello.cpp.s:
-	$(MAKE) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/src/hello.cpp.s
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/hello.cpp.s
 .PHONY : src/hello.cpp.s
 
 # Help Target
@@ -229,16 +156,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... install"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... add"
-	@echo "... src/add.o"
-	@echo "... src/add.i"
-	@echo "... src/add.s"
+	@echo "... hello"
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
 	@echo "... src/hello.s"
