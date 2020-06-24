@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16.0)
+project(hh)
+include_directories(include)
+set(SOURCES src/hello.cpp src/add.cpp)
+#file(GLOB SOURCES "src/*.cpp")
+add_executable(hh ${SOURCES})

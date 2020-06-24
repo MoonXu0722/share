@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xpy/cmake/test1/include/add.h
+
+/home/xpy/cmake/test1/src/add.cpp
+../include/add.h
+/home/xpy/cmake/test1/include/add.h
+cstdio
+-
+

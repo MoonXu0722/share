@@ -1,0 +1,7 @@
+/home/xpy/cmake/test1/BUILD/CMakeFiles/install/strip.dir
+/home/xpy/cmake/test1/BUILD/CMakeFiles/install/local.dir
+/home/xpy/cmake/test1/BUILD/CMakeFiles/install.dir
+/home/xpy/cmake/test1/BUILD/CMakeFiles/list_install_components.dir
+/home/xpy/cmake/test1/BUILD/CMakeFiles/rebuild_cache.dir
+/home/xpy/cmake/test1/BUILD/CMakeFiles/edit_cache.dir
+/home/xpy/cmake/test1/BUILD/CMakeFiles/add.dir
